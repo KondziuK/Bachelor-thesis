@@ -1,1 +1,10 @@
 # Bachelor-thesis
+PL:
+
+Tematem pracy było opracowanie modułu wykrywającego położenie obiektu kulistego w układzie rekonfigurowalnym. Do jego detekcji wykorzystano charakterystyczny kolor obiektu. Opracowany moduł składał się z 4 podmodułów realizujących: zamianę przestrzeni barw z RGB na YCbCr, binaryzację, morfologiczne zamknięcie oraz wyliczenie środka ciężkości. Komunikował się on z modułem kontrolnym stanowiącym bufor danych oraz poprzez magistralę AXI z układem procesorów typu ARM. Aplikacja powstała na komputer klasy PC poprzez łącze Ethernet po protokole TCP/IP realizowała przesyłanie zdjęć w formacie BMP o rozdzielczości 128 x 64 pikseli do układu procesorów. Transfer odbywał się w relacji Klient – Serwer. Aplikacja napisana na procesor ARM odbierała zdjęcie, przetwarzała je dodając konieczne sygnały dla modułu FPGA po czym przekazywała do części rekonfigurowalnej. Pozycja była następnie zwracana do układu procesorów przez który następował transfer tych danych do aplikacji na komputerze PC. Praca realizowana była na płytce UltraZed.
+
+
+
+EN:
+
+Thesis was to elaborate module to detect position of a spherical shape object in a reconfigurable unit. To achieve this, a characteristic color of the object was used. The elaborated module consisted of 4 submodules executing: Changing the color space from RGB to YCbCr, thresholding, morphological closing and calculating the geometrical center of the object. The module was communicating with control module which was implementing buffer and, through the AXI bus, with the ARM processors layer. The application created on the PC class computer was implementing the transfer of BMP format pictures with 128 x 64 resolution through TCP/IP protocol via Ethernet connection. Transfer was executed via Client – Server relation. The application created on ARM processor was then receiving the picture, processing them by adding extra signals needed by FPGA module and passing to the reconfigurable unit. Position of the object was being returned do the processors layer and through them to the PC application. Thesis was executed on the UltraZed board.
